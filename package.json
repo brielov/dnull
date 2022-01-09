@@ -1,0 +1,52 @@
+{
+  "name": "dnull",
+  "version": "1.0.0",
+  "description": "Replace null with undefined on any value",
+  "main": "dist/dnull.js",
+  "module": "dist/dnull.mjs",
+  "typings": "dist/dnull.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rimraf dist && rollup -c",
+    "postinstall": "is-ci || husky install",
+    "postpublish": "pinst --enable",
+    "prepare": "npm run build",
+    "prepublishOnly": "pinst --disable",
+    "test": "jest"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "author": "Gabriel Vaquer <brielov@icloud.com>",
+  "devDependencies": {
+    "@types/jest": "^27.4.0",
+    "@types/node": "^17.0.8",
+    "@typescript-eslint/eslint-plugin": "^5.9.0",
+    "@typescript-eslint/parser": "^5.9.0",
+    "esbuild": "^0.14.11",
+    "eslint": "^8.6.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.4",
+    "is-ci": "^3.0.1",
+    "jest": "^27.4.7",
+    "lint-staged": "^12.1.7",
+    "pinst": "^2.1.6",
+    "prettier": "^2.5.1",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.63.0",
+    "rollup-plugin-dts": "^4.1.0",
+    "rollup-plugin-esbuild": "^4.8.2",
+    "ts-jest": "^27.1.2",
+    "typescript": "^4.5.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brielov/dnull.git"
+  },
+  "bugs": {
+    "url": "https://github.com/brielov/dnull/issues"
+  },
+  "homepage": "https://github.com/brielov/dnull#readme"
+}
