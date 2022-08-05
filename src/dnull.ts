@@ -13,6 +13,7 @@ export type DNull<T> = T extends null
 
 export const dnull = <T>(src: T): DNull<T> => {
   if (src === null) return undefined as any;
+  if (src instanceof Date) return src as any;
   if (isPlainObject(src))
     return Object.fromEntries(
       Object.entries(src).map(([key, value]) => [key, dnull(value)]),
