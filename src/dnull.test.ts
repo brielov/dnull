@@ -12,6 +12,10 @@ it("works on arrays", () => {
   expect(dnull([1, 2, null])).toEqual([1, 2, undefined]);
 });
 
+it("works on dates", () => {
+  expect(dnull(new Date("01-01-2000"))).toEqual(new Date("01-01-2000"));
+});
+
 it("works on nested structures", () => {
   const obj = {
     name: "john",
