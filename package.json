@@ -1,6 +1,6 @@
 {
   "name": "dnull",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Replace null with undefined on any value",
   "main": "dist/dnull.js",
   "module": "dist/dnull.mjs",
